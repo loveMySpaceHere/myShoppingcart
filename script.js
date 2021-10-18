@@ -58,11 +58,11 @@ Array.from(btnElements).forEach( btn => {
         // console.log(btn.id)
         const cartItem = storeProducts[btn.id]
         if(cartItem.qtyAvl>0) {
-        shoppingcartRender(cartItem);
-        cartItems.push(cartItem);
+            shoppingcartRender(cartItem);
+            cartItems.push(cartItem);
         }
         else
-        alert("Item not in stock")
+            alert("Item not in stock")
         }
     }
 )

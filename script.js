@@ -73,8 +73,8 @@ function shoppingcartRender(x) {
                             <td><img src="images/plus-square.svg" class="qty-inc" id=${x.cartId} onclick="deleteCartProd(${x.cartId})"/></td>
                             <td>${x.qty}</td>
                             <td><img src="images/dash-square.svg" class="qty-dec" id=${x.cartId} onclick="deleteCartProd(${x.cartId})"/></td>
-                            <td>${x.price}</td>
-                            <td>${x.total}</td>
+                            <td>$${x.price}</td>
+                            <td>$${x.total}</td>
                             <td><img src="images/trash.svg" class="del" id=${x.cartId} onclick="deleteCartProd(${x.cartId})"/></td>`
                             
     table.appendChild(cartRow);                

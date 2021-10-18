@@ -13,7 +13,7 @@ const calculateCart = document.getElementById("calculateCart")
 // Store Products 
 // ---------------
 const storeProducts = [
-    { "id":0, "imgsrc":"images/casual-life-3d-bin.png", "item":'Bin3D', "price":15, "qty":1, "total":15, "qtyAvl":15},
+    { "id":0, "imgsrc":"images/casual-life-3d-bin.png", "item":'Bin3D', "price":15, "qty":1, "total":15, "qtyAvl":0},
     { "id":1, "imgsrc":"images/casual-life-3d-cup.png", "item":'Cup3D', "price":35, "qty":1, "total":35, "qtyAvl":10},
     { "id":2, "imgsrc":"images/casual-life-3d-books.png","item":'Books3D', "price":25, "qty":1, "total":25, "qtyAvl":20},
     { "id":3, "imgsrc":"images/casual-life-3d-gift-box.png","item":'GiftBox3D', "price":35, "qty":1, "total":35,"qtyAvl":20},
@@ -57,10 +57,12 @@ Array.from(btnElements).forEach( btn => {
     btn.onclick = () => {
         // console.log(btn.id)
         const cartItem = storeProducts[btn.id]
+        if(cartItem.qtyAvl>0) {
         shoppingcartRender(cartItem);
-        // console.log(item)
         cartItems.push(cartItem);
-        
+        }
+        else
+        alert("Item not in stock")
         }
     }
 )
